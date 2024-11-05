@@ -46,3 +46,6 @@ Follow these steps to set up the project:
 5. **Run the app on a simulator or a physical device:**
    - Open the Expo Go app on your phone and scan the QR code from the terminal or web page.
    - Alternatively, run it on an emulator using the options provided by Expo.
+
+
+testing
