@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, TouchableOpacity, ScrollView, SafeAreaView, StatusBar, Platform } from 'react-native';
 import { Truck, Recycle, Clock, MapPin } from 'lucide-react-native';
-import { Link, router } from 'expo-router';
+import { Link } from 'expo-router';
 
 export default function LandingScreen() {
   return (
@@ -49,8 +49,8 @@ export default function LandingScreen() {
               </Link>
             </View>
 
-            {/* Feature Cards */}
-            <View className="space-y-4">
+            {/* Feature Cards*/}
+            <View style={{ gap: 10 }} className="flex flex-col">
               <FeatureCard
                 icon={<Truck size={24} color="#34A853" />}
                 title="Real-Time Tracking"
