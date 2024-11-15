@@ -12,6 +12,7 @@ import {
 } from 'react-native';
 import { Truck } from 'lucide-react-native';
 import { Link, router } from 'expo-router';
+import { register } from '../services/authService';
 
 export default function RegisterScreen() {
   const [name, setName] = useState('');
@@ -21,7 +22,7 @@ export default function RegisterScreen() {
   const [address, setAddress] = useState('');
   const [agreeTerms, setAgreeTerms] = useState(false);
 
-  const handleRegister = () => {
+  const handleRegister = async () => {
     if (password !== confirmPassword) {
       Alert.alert('Error', 'Passwords do not match');
       return;
@@ -32,9 +33,16 @@ export default function RegisterScreen() {
       return;
     }
 
-    // Handle registration logic here
-    console.log('Registration attempted with:', { name, email, address, password });
-    router.replace('/(auth)/login'); // Navigate to the login screen
+    try {
+      const data = await register({ email, password, name, address });
+      const token = data.token;
+      router.replace({
+        pathname: '/(main)/placeholder',
+        params: { token },
+      });
+    } catch (error) {
+      Alert.alert('Registration Failed', 'An unexpected error occurred');
+    }
   };
 
   return (
