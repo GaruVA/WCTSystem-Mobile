@@ -1,6 +1,6 @@
-# GarbageTrack
+# WCTSystem
 
-**GarbageTrack** is a waste collection tracking and request system for urban areas. It allows users to track waste collection vehicles in real-time, request pickups, and receive notifications about service updates.
+**WCTSystem** is a waste collection tracking and request system for urban areas. It allows users to track waste collection vehicles in real-time, request pickups, and receive notifications about service updates.
 
 ## Features
 
@@ -24,13 +24,13 @@ Follow these steps to set up the project:
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/GaruVA/GarbageTrack.git
+   git clone https://github.com/GaruVA/WCTSystem-Mobile.git wctsystem-mobile
    ```
 
 2. **Navigate to the project directory:**
 
    ```bash
-   cd GarbageTrack
+   cd wctsystem-mobile
    ```
 
 3. **Install the dependencies:**
